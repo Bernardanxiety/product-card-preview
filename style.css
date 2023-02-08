@@ -1,0 +1,116 @@
+:root {
+  --fs: 1.4rem;
+  --ff-Montserrat: "Montserrat", sans-serif;
+  --ff-Fraunces: "Fraunces", serif;
+
+  --Darkcyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Verydarkblue: hsl(212, 21%, 14%);
+  --Darkgrayishblue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--Cream);
+  font-size: var(--fs);
+  font-family: var(--ff-Montserrat);
+  display: grid;
+  place-items: center;
+  padding: 2.7rem 1.6rem;
+  color: hsl(228, 12%, 48%);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.margin-top > * + * {
+  margin-top: var(--top, 1em);
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card_content {
+  background-color: #fff;
+  padding: 2.2rem 2.4rem;
+}
+
+.perfume {
+  font-size: 1.3rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+h1 {
+  --top: 0.3em;
+
+  color: hsl(212, 21%, 14%);
+  font-family: var(--ff-Fraunces);
+  font-size: 2.9rem;
+  line-height: 1.1;
+}
+
+.description {
+  --top: 1.3em;
+}
+
+.price {
+  --top: 1.25em;
+
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.price-now {
+  color: hsl(158, 36%, 37%);
+  font-weight: 700;
+  font-size: 3rem;
+  font-family: var(--ff-Fraunces);
+}
+
+.price-then {
+  text-decoration: line-through;
+}
+
+button {
+  --top: 0.8em;
+
+  border-radius: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: center;
+  gap: 1em;
+  padding: 1.2em 0;
+  appearance: none;
+  border: none;
+  background-color: hsl(158, 36%, 37%);
+  color: #fff;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .desktopImg {
+    display: none;
+  }
+}
