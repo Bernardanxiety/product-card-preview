@@ -33,6 +33,7 @@ body {
   padding: 2.7rem 1.6rem;
   color: hsl(228, 12%, 48%);
   line-height: 1.6;
+  min-height: 100vh;
 }
 
 img {
@@ -112,5 +113,29 @@ button {
 @media (max-width: 700px) {
   .desktopImg {
     display: none;
+  }
+}
+
+@media (min-width: 701px) {
+  .mobileImg {
+    display: none;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 600px;
+  }
+
+  .card_content {
+    padding: 3rem;
+  }
+
+  .card_content > * {
+    --top: 1.65em;
+  }
+
+  .margin-top h1 {
+    --top: 0.6em;
   }
 }
